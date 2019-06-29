@@ -1,3 +1,9 @@
+'''
+文件描述:基于微信公众号实现AI客服
+作者：xyc
+时间：2019/6/29
+'''
+
 # !/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
@@ -36,6 +42,10 @@ if __name__ == '__main__':
     # 测试get_robot_reply函数
     print(get_robot_reply("你叫什么名字"))
     print(get_robot_reply("武汉明天天气如何"))
+    print(get_robot_reply("你是谁男是女"))
+    print(get_robot_reply("你到底是谁"))
 
-# while True:
-    print(get_robot_reply(input()))
+while True:
+    question = input("\n我说: ")
+    answer = get_robot_reply(question)
+    print("\n小魔仙说: %s"% answer)
